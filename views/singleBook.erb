@@ -1,0 +1,18 @@
+  <script type="text/javascript">
+  </script>
+  <body style="background:#E6E6FA;margin-left:50"></body>
+  <h1> <%= "Book Review" %></h1>
+  <h2> <%= @book['title'] %> <span style="font-size:15pt"> by <%= @book['author'] %></span></h2>
+  <img src="<%= @book['url'] %>" style="height:200">
+  <div style="margin-top:20"> <%= @book['description'] %></div>
+<% if(@book['comments']) %>
+<hr>
+<div>Comments:</div>
+  <ul>
+  	<% @book['comments'].each do |c| %>
+  <li style="padding:1pt"><span style="font-size:12pt"><i><%= c['comment'] %></span></i> by <%= c['name'] %></a> </li>
+<% end %>
+  </ul>
+<% end %>  
+ <a href='/comment/<%= @book["_id"]%>'>Leave a comment</a></br>
+  <a href='/books/'>Return to list</a>

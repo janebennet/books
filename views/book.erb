@@ -1,0 +1,9 @@
+  <body style="background:#E6E6FA;margin-left:50"></body>
+  <h1> <%= "Book Review List" %></h1>
+  <ul>
+  	<% @books.each do |book| %>
+  <li style="padding:5pt"> <a href='/books/<%= book["_id"]%>'><span style="font-size:15pt"><%= book['title'] %></span> by <%= book['author'] %></a> </li>
+<% end %>
+  </ul>
+  <a href='/newBook'>Add a new book review</a> </li>
+
