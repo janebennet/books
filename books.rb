@@ -19,7 +19,8 @@ get '/initialize/' do
     	:description =>"Beautiful book about life, happiness, childhood. Very bright. Delightful."})
     coll.insert({:title => "To Kill a Mockingbird", :author => "Harper Lee", 
     	:url => "http://deepsouthmag.com/wp-content/uploads/2013/04/mockingbird.jpg",
-    	:description =>"This is a very interesting book about people and humanity of every person."}) 
+    	:description =>"This is a very interesting book about people and humanity of every person.",
+    	:comments => [{:name => "Ann", :comment => "A good book."}]}) 
 end
 
 get '/books/' do
